@@ -18,7 +18,7 @@ router.get("/", function (req, res, next) {
 /* Read Cookies */
 router.get("/readCookies", function (req, res) {
   console.log(req.cookies.age);
-  res.send(req.cookies, Checked); 
+  res.send("Cookie Checked"); 
  
 });
 
@@ -33,7 +33,7 @@ router.get("/deleteCookies", function (req, res) {
 router.get("/checkBan", function (req, res) {
   console.log(req.session);
 
-  if (req.session.ban === true) {
+  if (req .session.ban === true) {
     res.send("You are banned");
   } else {
     res.send("You are not banned");
