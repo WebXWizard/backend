@@ -5,17 +5,18 @@ const userModel = require("./users");
 /* GET home page. */
 router.get("/", function (req, res, next) {
 
-  // Sessions
-  // req.session.ban = true;
+/*   Sessions
+  req.session.ban = true;
 
-  // Cookies
-  // res.cookie("age", 25);
-  // console.log(req.cookies);
+  Cookies
+  res.cookie("age", 25);
+  console.log(req.cookies); */
 
   res.render("index", { title: "Express" });
 });
 
 /* Read Cookies */
+
 router.get("/readCookies", function (req, res) {
   console.log(req.cookies.age);
   res.send("Cookie Checked"); 
@@ -30,6 +31,7 @@ router.get("/deleteCookies", function (req, res) {
 });
 
 /* Sessions */
+
 router.get("/checkBan", function (req, res) {
   console.log(req.session);
 
